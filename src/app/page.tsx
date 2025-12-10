@@ -90,7 +90,7 @@ export default function CafePage() {
             style={{ backgroundColor: THEME.cream }}
           >
             <img
-              src="/logo.jpg"
+              src="/center.avif"
               alt="Cafe Logo"
               className="w-full h-full object-cover"
             />
