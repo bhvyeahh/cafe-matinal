@@ -84,7 +84,7 @@ export default function CafePage() {
             </a>
           ))}
 
-          {/* ----- LOGO UPDATE HERE ----- */}
+          {/* ----- LOGO ----- */}
           <div
             className="w-10 h-10 rounded-full shadow-md overflow-hidden relative"
             style={{ backgroundColor: THEME.cream }}
@@ -95,7 +95,7 @@ export default function CafePage() {
               className="w-full h-full object-cover"
             />
           </div>
-          {/* -------------------------- */}
+          {/* ---------------- */}
 
           {["About Us", "News"].map((item) => (
             <a
@@ -268,185 +268,183 @@ export default function CafePage() {
             </div>
           </div>
         </div>
-        
 
         {/* ===================== TESTIMONIALS SECTION ===================== */}
-      <section className="py-32 px-6 max-w-6xl mx-auto">
-        
-        {/* Section Heading */}
-        <div className="text-center mb-20">
-          <h2 className={`${serif.className} text-5xl md:text-6xl text-[#163C26] mb-4`}>
-            What People <br /> Love About Us
-          </h2>
-        </div>
-
-        {/* Masonry Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          {/* Column 1 */}
-          <div className="flex flex-col gap-6">
-            {/* Quote Card */}
-            <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
-              <span className="text-[#163C26] text-4xl font-serif">“</span>
-              <p className="text-[#163C26] text-sm leading-relaxed font-medium">
-                Brewhaus has spoiled other coffee shops for me — in the best way. Great espresso, fresh pastries, and a team that makes you feel like a regular from day one.
-              </p>
-              <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
-                Patrick M. — Espresso lover
-              </p>
-            </div>
-            {/* Image Card */}
-            <div className="h-64 rounded-3xl overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop" 
-                alt="Pouring Coffee" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex flex-col gap-6">
-             {/* Image Card (Top for middle col) */}
-             <div className="h-64 rounded-3xl overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2069&auto=format&fit=crop" 
-                alt="Iced Coffee" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            {/* Quote Card */}
-            <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
-              <span className="text-[#163C26] text-4xl font-serif">“</span>
-              <p className="text-[#163C26] text-sm leading-relaxed font-medium">
-                I stop by every morning before work, and it's the best part of my day. The iced latte is my go-to, but I've honestly never had a bad drink here. Everything tastes handcrafted and full of care.
-              </p>
-              <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
-                Jordan T. — Iced latte addict
-              </p>
-            </div>
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex flex-col gap-6">
-            {/* Quote Card */}
-            <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
-              <span className="text-[#163C26] text-4xl font-serif">“</span>
-              <p className="text-[#163C26] text-sm leading-relaxed font-medium">
-                Always a warm, welcoming vibe — perfect for a quick coffee or a quiet read. The banana bread? Totally addictive.
-              </p>
-              <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
-                Sofia R. — Coffee fan
-              </p>
-            </div>
-             {/* Image Card */}
-             <div className="h-64 rounded-3xl overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937&auto=format&fit=crop" 
-                alt="Latte Art" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-          </div>
-
-        </div>
-
-        {/* Bottom Button */}
-        <div className="mt-20 flex justify-center">
-          <button className="px-10 py-4 bg-[#163C26] text-[#F2E8CF] rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#0D2618] transition-all shadow-lg hover:shadow-xl">
-            Our Locations
-          </button>
-        </div>
-
-      </section>
-
-{/* ===================== LOCATION SECTION ===================== */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        
-        {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className={`${serif.className} text-5xl md:text-6xl text-[#F2E8CF] mb-4`}>
-            Visit Us
-          </h2>
-          <p className="text-[#F2E8CF]/60 text-lg font-light tracking-wide">
-            Stop by for your daily brew.
-          </p>
-        </div>
-
-        {/* Location Content: Map + Big Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch h-auto lg:h-[500px]">
-          
-          {/* LEFT: Map (Styled to match theme) */}
-          <div className="w-full h-[400px] lg:h-full rounded-[2rem] overflow-hidden border-4 border-[#F2E8CF]/10 shadow-2xl relative group">
-             
-             {/* Google Maps Embed Pinpointing "QQQ6+HQ San Diego" */}
-             <iframe 
-               width="100%" 
-               height="100%" 
-               style={{ 
-                 border: 0, 
-                 // Dark Coffee Theme Filters
-                 filter: 'grayscale(100%) invert(92%) contrast(83%)' 
-               }} 
-               loading="lazy" 
-               allowFullScreen 
-               referrerPolicy="no-referrer-when-downgrade"
-               // We use the 'q' parameter with the specific Plus Code to pinpoint the exact spot
-               src="https://maps.google.com/maps?q=QQQ6%2BHQ%20San%20Diego%2C%20California%2C%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed"
-             ></iframe>
-             
-             {/* Deep Green Tint Overlay */}
-             <div className="absolute inset-0 bg-[#163C26] mix-blend-overlay opacity-60 pointer-events-none transition-opacity duration-500 group-hover:opacity-40"></div>
-          </div>
-
-          {/* RIGHT: Big Location Card */}
-          <div className="w-full h-full bg-[#F2E8CF] rounded-[2rem] p-10 md:p-14 flex flex-col justify-center items-start gap-8 shadow-2xl">
-            
-            <div>
-              <span className="text-[#163C26]/60 text-xs font-bold uppercase tracking-[0.2em] mb-2 block">
-                San Diego
-              </span>
-              <h3 className={`${serif.className} text-4xl md:text-5xl text-[#163C26]`}>
-                Cafe Matinal
-              </h3>
-            </div>
-
-            <div className="space-y-2">
-               <p className="text-[#163C26] text-xl font-medium leading-relaxed">
-                 Sorrento Valley Blvd <br/> San Diego, CA 92121
-               </p>
-               <p className="text-[#163C26]/60 text-sm font-mono pt-2">
-                 Plus Code: QQQ6+HQ
-               </p>
-            </div>
-
-            <div className="space-y-1 w-full max-w-sm">
-               <div className="flex justify-between text-[#163C26]/80 text-sm font-medium border-b border-[#163C26]/10 pb-2">
-                 <span>Mon - Sat</span>
-                 <span>7:00 AM — 5:00 PM</span>
-               </div>
-               <div className="flex justify-between text-[#163C26]/80 text-sm font-medium pt-2">
-                 <span>Sunday</span>
-                 <span>7:00 AM — 4:00 PM</span>
-               </div>
-            </div>
-
-            <a 
-              href="https://www.google.com/maps/search/?api=1&query=QQQ6%2BHQ+San+Diego%2C+California%2C+USA" 
-              target="_blank"
-              className="mt-4 w-full md:w-auto px-10 py-4 bg-[#163C26] text-[#F2E8CF] rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#0D2618] transition-all hover:scale-105 text-center"
+        <section className="py-32 px-6 max-w-6xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-20">
+            <h2
+              className={`${serif.className} text-5xl md:text-6xl text-[#163C26] mb-4`}
             >
-               Get Directions
-            </a>
-
+              What People <br /> Love About Us
+            </h2>
           </div>
 
-        </div>
-      </section>
+          {/* Masonry Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Column 1 */}
+            <div className="flex flex-col gap-6">
+              {/* Quote Card */}
+              <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
+                <span className="text-[#163C26] text-4xl font-serif">“</span>
+                <p className="text-[#163C26] text-sm leading-relaxed font-medium">
+                  Cafe Matinal has spoiled other coffee shops for me — in the
+                  best way. Great espresso, fresh pastries, and a team that
+                  makes you feel like a regular from day one.
+                </p>
+                <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
+                  Patrick M. — Espresso lover
+                </p>
+              </div>
+              {/* Image Card */}
+              <div className="h-64 rounded-3xl overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop"
+                  alt="Pouring Coffee"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+
+            {/* Column 2 */}
+            <div className="flex flex-col gap-6">
+              {/* Image Card */}
+              <div className="h-64 rounded-3xl overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2069&auto=format&fit=crop"
+                  alt="Iced Coffee"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              {/* Quote Card */}
+              <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
+                <span className="text-[#163C26] text-4xl font-serif">“</span>
+                <p className="text-[#163C26] text-sm leading-relaxed font-medium">
+                  I stop by every morning before work, and it's the best part of
+                  my day. The iced latte is my go-to, but I've honestly never
+                  had a bad drink here. Everything tastes handcrafted.
+                </p>
+                <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
+                  Jordan T. — Iced latte addict
+                </p>
+              </div>
+            </div>
+
+            {/* Column 3 */}
+            <div className="flex flex-col gap-6">
+              {/* Quote Card */}
+              <div className="bg-[#E6D5B0]/40 p-8 rounded-3xl space-y-4">
+                <span className="text-[#163C26] text-4xl font-serif">“</span>
+                <p className="text-[#163C26] text-sm leading-relaxed font-medium">
+                  Always a warm, welcoming vibe — perfect for a quick coffee or
+                  a quiet read. The banana bread? Totally addictive.
+                </p>
+                <p className="text-[#163C26]/60 text-xs font-bold uppercase tracking-wider mt-4">
+                  Sofia R. — Coffee fan
+                </p>
+              </div>
+              {/* Image Card */}
+              <div className="h-64 rounded-3xl overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1937&auto=format&fit=crop"
+                  alt="Latte Art"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Button */}
+          <div className="mt-20 flex justify-center">
+            <button className="px-10 py-4 bg-[#163C26] text-[#F2E8CF] rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#0D2618] transition-all shadow-lg hover:shadow-xl">
+              Our Locations
+            </button>
+          </div>
+        </section>
+
+        {/* ===================== LOCATION SECTION ===================== */}
+        <section className="py-24 px-6 max-w-6xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-16">
+            <h2
+              className={`${serif.className} text-5xl md:text-6xl text-[#F2E8CF] mb-4`}
+            >
+              Visit Us
+            </h2>
+            <p className="text-[#F2E8CF]/60 text-lg font-light tracking-wide">
+              Stop by for your daily brew.
+            </p>
+          </div>
+
+          {/* Location Content: Map + Big Card */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch h-auto lg:h-[500px]">
+            {/* LEFT: Map */}
+            <div className="w-full h-[400px] lg:h-full rounded-[2rem] overflow-hidden border-4 border-[#F2E8CF]/10 shadow-2xl relative group">
+              {/* Google Maps Embed with Dark Filter */}
+              <iframe
+                width="100%"
+                height="100%"
+                style={{
+                  border: 0,
+                  filter: "grayscale(100%) invert(92%) contrast(83%)",
+                }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=QQQ6%2BHQ%20San%20Diego%2C%20California%2C%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              ></iframe>
+
+              {/* Deep Green Tint Overlay */}
+              <div className="absolute inset-0 bg-[#163C26] mix-blend-overlay opacity-60 pointer-events-none transition-opacity duration-500 group-hover:opacity-40"></div>
+            </div>
+
+            {/* RIGHT: Big Location Card */}
+            <div className="w-full h-full bg-[#F2E8CF] rounded-[2rem] p-10 md:p-14 flex flex-col justify-center items-start gap-8 shadow-2xl">
+              <div>
+                <span className="text-[#163C26]/60 text-xs font-bold uppercase tracking-[0.2em] mb-2 block">
+                  San Diego
+                </span>
+                <h3
+                  className={`${serif.className} text-4xl md:text-5xl text-[#163C26]`}
+                >
+                  Luxury Coffee Shop
+                </h3>
+              </div>
+
+              <div className="space-y-2">
+                <p className="text-[#163C26] text-xl font-medium leading-relaxed">
+                   <br /> San Diego, CA 92121
+                </p>
+                <p className="text-[#163C26]/60 text-sm font-mono pt-2">
+                  
+                </p>
+              </div>
+
+              <div className="space-y-1 w-full max-w-sm">
+                <div className="flex justify-between text-[#163C26]/80 text-sm font-medium border-b border-[#163C26]/10 pb-2">
+                  <span>Mon - Sat</span>
+                  <span>7:00 AM — 5:00 PM</span>
+                </div>
+                <div className="flex justify-between text-[#163C26]/80 text-sm font-medium pt-2">
+                  <span>Sunday</span>
+                  <span>7:00 AM — 4:00 PM</span>
+                </div>
+              </div>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=QQQ6%2BHQ+San+Diego%2C+California%2C+USA"
+                target="_blank"
+                className="mt-4 w-full md:w-auto px-10 py-4 bg-[#163C26] text-[#F2E8CF] rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[#0D2618] transition-all hover:scale-105 text-center"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <div className="mt-32 border-t border-[#0D2618]/10 pt-10 text-center text-[#0D2618]/40 text-xs uppercase tracking-widest pb-10">
-          &copy; 2025 Cafe Matinal. All rights reserved.
+          &copy; 2025. All rights reserved.
         </div>
       </section>
     </div>

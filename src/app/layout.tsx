@@ -12,7 +12,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Cafe Matinal | San Diego",
+  title: "Luxury Coffee Shop",
   description: "Artisan coffee in the heart of the city.",
 };
 
