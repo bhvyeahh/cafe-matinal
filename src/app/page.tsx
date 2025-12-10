@@ -4,6 +4,7 @@ import React from "react";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { X, ArrowRight } from "lucide-react";
+import { b } from "framer-motion/client";
 
 // --- Font Configuration ---
 const serif = DM_Serif_Display({ weight: "400", subsets: ["latin"] });
@@ -85,15 +86,8 @@ export default function CafePage() {
           ))}
 
           {/* ----- LOGO ----- */}
-          <div
-            className="w-10 h-10 rounded-full shadow-md overflow-hidden relative"
-            style={{ backgroundColor: THEME.cream }}
-          >
-            <img
-              src="/center.avif"
-              alt="Cafe Logo"
-              className="w-full h-full object-cover"
-            />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-md" style={{ backgroundColor: THEME.cream }}>
+            <span className="font-bold text-lg" style={{ color: THEME.darkGreen }}>L</span>
           </div>
           {/* ---------------- */}
 
